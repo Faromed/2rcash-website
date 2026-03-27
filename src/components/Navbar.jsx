@@ -1,7 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FiDownload } from 'react-icons/fi';
+<<<<<<< HEAD
 import config from '../config';
+=======
+>>>>>>> a5bd022d7c2785393cbab1b6782450bc78cd7ecf
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -42,12 +45,16 @@ export default function Navbar() {
           <a href="/#telecharger" onClick={(e) => handleNavClick(e, 'telecharger')}>Télécharger</a>
           <Link to="/faq" className={location.pathname === '/faq' ? 'active' : ''}>FAQ</Link>
           <Link to="/support" className={location.pathname === '/support' ? 'active' : ''}>Support</Link>
+<<<<<<< HEAD
           <a
             href={config.apkDownloadUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary navbar-cta"
           >
+=======
+          <a href="/apk/2rcash.apk" download className="btn btn-primary navbar-cta">
+>>>>>>> a5bd022d7c2785393cbab1b6782450bc78cd7ecf
             <FiDownload /> APK
           </a>
         </div>
@@ -67,6 +74,7 @@ export default function Navbar() {
         <Link to="/support">Support</Link>
         <Link to="/politique-de-confidentialite">Confidentialité</Link>
         <Link to="/conditions-generales">CGU</Link>
+<<<<<<< HEAD
         <a
           href={config.apkDownloadUrl}
           target="_blank"
@@ -74,6 +82,10 @@ export default function Navbar() {
           className="btn btn-primary"
         >
           <FiDownload /> Télécharger l&apos;APK
+=======
+        <a href="/apk/2rcash.apk" download className="btn btn-primary">
+          <FiDownload /> Télécharger la version Android
+>>>>>>> a5bd022d7c2785393cbab1b6782450bc78cd7ecf
         </a>
       </div>
     </nav>
