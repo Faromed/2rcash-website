@@ -50,11 +50,11 @@ export default function Footer() {
             <h4>Contact</h4>
             <a href="mailto:support@2rcash.com">
               <FiMail style={{ verticalAlign: 'middle', marginRight: 8 }} />
-              support@2rcash.com
+              contact2rcash@gmail.com
             </a>
             <a href="tel:+22960000000">
               <FiPhone style={{ verticalAlign: 'middle', marginRight: 8 }} />
-              +229 60 00 00 00
+              +229 67 47 81 77
             </a>
             <a href="#">
               <FiMapPin style={{ verticalAlign: 'middle', marginRight: 8 }} />
