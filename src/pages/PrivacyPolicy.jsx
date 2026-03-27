@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
             <li>Droit à la portabilité de vos données.</li>
           </ul>
           <p>
-            Pour exercer vos droits, contactez-nous à : <strong>support@2rcash.com</strong>
+            Pour exercer vos droits, contactez-nous à : <strong>contact2rcash@gmail.com</strong>
           </p>
 
           <h2>7. Durée de conservation</h2>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
             Pour toute question relative à cette politique de confidentialité, contactez-nous :
           </p>
           <ul>
-            <li>Email : <strong>support@2rcash.com</strong></li>
+            <li>Email : <strong>contact2rcash@gmail.com</strong></li>
             <li>Adresse : Cotonou, Bénin</li>
           </ul>
         </div>

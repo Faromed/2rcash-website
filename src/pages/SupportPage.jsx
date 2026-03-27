@@ -12,7 +12,7 @@ export default function SupportPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:support@2rcash.com?subject=${encodeURIComponent(
+    const mailtoLink = `mailto:contact2rcash@gmail.com?subject=${encodeURIComponent(
       `[Support 2RCASH] ${form.subject}`
     )}&body=${encodeURIComponent(
       `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`

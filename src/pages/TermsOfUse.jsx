@@ -113,7 +113,7 @@ export default function TermsOfUse() {
 
           <h2>14. Contact</h2>
           <p>
-            Pour toute question concernant ces CGU : <strong>support@2rcash.com</strong>
+            Pour toute question concernant ces CGU : <strong>contact2rcash@gmail.com</strong>
           </p>
         </div>
       </div>
