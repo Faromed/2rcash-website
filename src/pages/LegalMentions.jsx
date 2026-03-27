@@ -14,11 +14,11 @@ export default function LegalMentions() {
           </p>
           <ul>
             <li><strong>Raison sociale</strong> : 2RCASH</li>
-            <li><strong>Forme juridique</strong> : [À compléter]</li>
+            <li><strong>Forme juridique</strong> : ---</li>
             <li><strong>Siège social</strong> : Cotonou, Bénin</li>
-            <li><strong>Email</strong> : support@2rcash.com</li>
-            <li><strong>Téléphone</strong> : +229 60 00 00 00</li>
-            <li><strong>Directeur de la publication</strong> : [À compléter]</li>
+            <li><strong>Email</strong> : contact2rcash@gmail.com</li>
+            <li><strong>Téléphone</strong> : +229 67 47 81 77</li>
+            <li><strong>Développeur</strong> : MDN Action +229 01 61 22 81 65</li>
           </ul>
 
           <h2>2. Hébergement</h2>
@@ -31,7 +31,7 @@ export default function LegalMentions() {
             <li><strong>Site web</strong> : https://vercel.com</li>
           </ul>
           <p>
-            Les serveurs backend sont hébergés par : [À compléter selon votre hébergeur]
+            Les serveurs backend sont hébergés par : ---
           </p>
 
           <h2>3. Propriété intellectuelle</h2>
@@ -86,7 +86,7 @@ export default function LegalMentions() {
           <h2>9. Contact</h2>
           <p>
             Pour toute question relative aux présentes mentions légales :
-            <strong> support@2rcash.com</strong>
+            <strong> contact2rcash@gmail.com</strong>
           </p>
         </div>
       </div>

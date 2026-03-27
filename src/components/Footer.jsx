@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Contact */}
           <div className="footer-column">
             <h4>Contact</h4>
-            <a href="mailto:support@2rcash.com">
+            <a href="mailto:contact2rcash@gmail.com">
               <FiMail style={{ verticalAlign: 'middle', marginRight: 8 }} />
               contact2rcash@gmail.com
             </a>
