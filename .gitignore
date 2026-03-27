@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# APK files - NE JAMAIS PUSH
+*.apk
+public/apk/
+
+# Environment
+.env
+.env.local
