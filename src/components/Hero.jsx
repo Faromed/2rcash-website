@@ -1,9 +1,6 @@
 import { FiDownload, FiArrowRight } from 'react-icons/fi';
 import PhoneMockup from './PhoneMockup';
-<<<<<<< HEAD
 import config from '../config';
-=======
->>>>>>> a5bd022d7c2785393cbab1b6782450bc78cd7ecf
 
 export default function Hero() {
   return (
@@ -28,16 +25,12 @@ export default function Hero() {
             </p>
 
             <div className="hero-buttons">
-<<<<<<< HEAD
               <a
                 href={config.apkDownloadUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-large download-btn-apk"
               >
-=======
-              <a href="/apk/2rcash.apk" download className="btn btn-primary btn-large download-btn-apk">
->>>>>>> a5bd022d7c2785393cbab1b6782450bc78cd7ecf
                 <FiDownload /> Télécharger l&apos;APK
               </a>
               <a href="#fonctionnalites" className="btn btn-outline btn-large">
