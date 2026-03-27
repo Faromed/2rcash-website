@@ -1,6 +1,7 @@
 import { FiDownload, FiSmartphone } from 'react-icons/fi';
 import { FaGooglePlay } from 'react-icons/fa';
 import useScrollReveal from '../hooks/useScrollReveal';
+import config from '../config';
 
 export default function DownloadSection() {
   const ref = useScrollReveal();
@@ -21,7 +22,12 @@ export default function DownloadSection() {
           </p>
 
           <div className="download-buttons reveal">
-            <a href="/apk/2rcash.apk" download className="btn btn-primary btn-large download-btn-apk">
+            <a
+              href={config.apkDownloadUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary btn-large download-btn-apk"
+            >
               <FiDownload /> Télécharger l&apos;APK (Android)
             </a>
 
@@ -36,7 +42,8 @@ export default function DownloadSection() {
 
           <p className="download-note reveal">
             <FiSmartphone style={{ verticalAlign: 'middle', marginRight: 6 }} />
-            Requiert Android 6.0 ou supérieur &bull; Taille : ~25 Mo &bull; Version : <span className="version">1.0.0</span>
+            Requiert Android 6.0 ou supérieur • Taille : ~25 Mo • Version :{' '}
+            <span className="version">{config.appVersion}</span>
           </p>
         </div>
       </div>
