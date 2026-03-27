@@ -38,7 +38,7 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FiMail /></div>
               <div>
                 <div className="support-contact-label">Email</div>
-                <div className="support-contact-value">support@2rcash.com</div>
+                <div className="support-contact-value">contact2rcash@gmail.com</div>
               </div>
             </div>
 
@@ -46,7 +46,7 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FiPhone /></div>
               <div>
                 <div className="support-contact-label">Téléphone</div>
-                <div className="support-contact-value">+229 60 00 00 00</div>
+                <div className="support-contact-value">+229 01 67 47 81 77</div>
               </div>
             </div>
 
@@ -54,7 +54,7 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FaWhatsapp /></div>
               <div>
                 <div className="support-contact-label">WhatsApp</div>
-                <div className="support-contact-value">+229 60 00 00 00</div>
+                <div className="support-contact-value">+229 67 47 81 77</div>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FiClock /></div>
               <div>
                 <div className="support-contact-label">Horaires</div>
-                <div className="support-contact-value">Lun - Sam : 8h - 22h</div>
+                <div className="support-contact-value">Lun - Dim : 7h - 00h</div>
               </div>
             </div>
 
