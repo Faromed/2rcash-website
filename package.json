@@ -4,8 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "vite --mode 1xbet",
+    "dev:1xbet": "vite --mode 1xbet",
+    "dev:melbet": "vite --mode melbet",
+    "build": "vite build --mode 1xbet",
+    "build:1xbet": "vite build --mode 1xbet --outDir dist/1xbet",
+    "build:melbet": "vite build --mode melbet --outDir dist/melbet",
     "lint": "eslint .",
     "preview": "vite preview"
   },

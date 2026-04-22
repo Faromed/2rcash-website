@@ -32,6 +32,7 @@
   --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.2);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --max-width: 1200px;
+  --brand-outline: rgba(255, 255, 255, 0.18);
 }
 
 /* ===== RESET ===== */
@@ -110,6 +111,20 @@ button {
   margin: 0 auto 60px;
 }
 
+.section-kicker {
+  width: fit-content;
+  margin: 0 auto 14px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--brand-outline);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-light), var(--accent), var(--accent-dark));
   -webkit-background-clip: text;
@@ -157,6 +172,18 @@ button {
   padding: 20px 48px;
   font-size: 1.15rem;
   border-radius: var(--radius);
+}
+
+.btn-disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  pointer-events: none;
+  box-shadow: none;
+  filter: grayscale(0.15);
+}
+
+.download-alt-link {
+  white-space: nowrap;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -529,6 +556,53 @@ button {
   flex-wrap: wrap;
 }
 
+.hero-panel {
+  margin-bottom: 28px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--brand-outline);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-panel-eyebrow {
+  margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-panel-title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 14px;
+}
+
+.hero-panel-list {
+  display: grid;
+  gap: 10px;
+}
+
+.hero-panel-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--grey);
+  font-size: 0.95rem;
+}
+
+.hero-panel-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 8px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
 .hero-stats {
   display: flex;
   gap: 40px;
@@ -726,11 +800,11 @@ button {
   overflow: hidden;
 }
 
-.ps-card-1xbet {
+.ps-card-brand-default {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
 }
 
-.ps-card-melbet {
+.ps-card-brand-accent {
   background: linear-gradient(135deg, var(--primary), var(--accent-dark));
 }
 
@@ -748,6 +822,46 @@ button {
 .ps-card-sub {
   font-size: 6px;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.ps-chip-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.ps-chip {
+  padding: 5px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ps-mini-panel {
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ps-mini-label {
+  font-size: 6px;
+  color: var(--grey);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 4px;
+}
+
+.ps-mini-value {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--white);
 }
 
 /* Phone quick actions */
@@ -816,6 +930,16 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.04);
   position: relative;
   overflow: hidden;
+}
+
+.feature-card-index {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: rgba(255, 255, 255, 0.18);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
 }
 
 .feature-card::before {
@@ -951,12 +1075,12 @@ button {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
 }
 
-.platform-card-1xbet {
+.platform-card-brand-default {
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   border: 1px solid rgba(57, 73, 171, 0.3);
 }
 
-.platform-card-melbet {
+.platform-card-brand-accent {
   background: linear-gradient(135deg, var(--primary), var(--accent-dark));
   border: 1px solid rgba(255, 143, 0, 0.3);
 }
@@ -1464,6 +1588,277 @@ button {
   color: var(--accent);
 }
 
+.logo-icon-brand {
+  overflow: hidden;
+  border: 1px solid var(--brand-outline);
+  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+.brand-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 5px;
+}
+
+.hero-brand-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--brand-outline);
+  backdrop-filter: blur(14px);
+}
+
+.hero-brand-logo {
+  width: 62px;
+  height: 62px;
+  padding: 8px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-brand-logo-img,
+.hero-showcase-logo-img,
+.download-brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero-brand-name {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: var(--white);
+}
+
+.hero-brand-caption {
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+.hero-showcase-card {
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
+  margin: 0 auto 18px;
+  border-radius: 24px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04));
+  border: 1px solid var(--brand-outline);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(16px);
+}
+
+.hero-showcase-topline {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--grey);
+  margin-bottom: 10px;
+}
+
+.hero-showcase-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 18px;
+}
+
+.hero-showcase-logo {
+  height: 72px;
+  padding: 10px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.download-brand-logo {
+  width: 86px;
+  height: 86px;
+  margin: 0 auto;
+  padding: 12px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--brand-outline);
+  box-shadow: var(--shadow-sm);
+}
+
+body[data-brand='1xbet'] .navbar.scrolled {
+  background: rgba(7, 21, 47, 0.88);
+}
+
+body[data-brand='1xbet'] .hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(77, 120, 255, 0.28), transparent 28%),
+    linear-gradient(135deg, #07152f 0%, #102447 44%, #1b3fa6 100%);
+}
+
+body[data-brand='1xbet'] .hero::before {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.14) 0%, transparent 70%);
+}
+
+body[data-brand='1xbet'] .hero::after {
+  background: radial-gradient(circle, rgba(77, 120, 255, 0.18) 0%, transparent 68%);
+}
+
+body[data-brand='1xbet'] .btn-primary {
+  color: #07152f;
+}
+
+body[data-brand='1xbet'] .btn-outline {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+body[data-brand='1xbet'] .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body[data-brand='1xbet'] .feature-card {
+  border-color: rgba(109, 154, 255, 0.18);
+  background: linear-gradient(180deg, rgba(17, 40, 79, 0.96), rgba(11, 26, 52, 0.92));
+}
+
+body[data-brand='1xbet'] .hero-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(10, 31, 63, 0.5));
+}
+
+body[data-brand='1xbet'] .hero-stats > div {
+  min-width: 132px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(109, 154, 255, 0.16);
+}
+
+body[data-brand='1xbet'] .hero-showcase-card {
+  border-radius: 28px;
+}
+
+body[data-brand='1xbet'] .ps-chip {
+  background: rgba(77, 120, 255, 0.18);
+}
+
+body[data-brand='1xbet'] .feature-card {
+  border-radius: 22px;
+}
+
+body[data-brand='1xbet'] .feature-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+body[data-brand='1xbet'] .download {
+  background:
+    linear-gradient(180deg, rgba(7, 21, 47, 0.98), rgba(11, 26, 52, 0.95)),
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.05) 50%, transparent 100%);
+}
+
+body[data-brand='melbet'] .navbar.scrolled {
+  background: rgba(15, 15, 16, 0.92);
+}
+
+body[data-brand='melbet'] .hero {
+  background:
+    radial-gradient(circle at 82% 14%, rgba(255, 138, 0, 0.25), transparent 30%),
+    linear-gradient(135deg, #050505 0%, #161616 48%, #2a1704 100%);
+}
+
+body[data-brand='melbet'] .hero::before {
+  background: radial-gradient(circle, rgba(255, 138, 0, 0.18) 0%, transparent 70%);
+}
+
+body[data-brand='melbet'] .hero::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+}
+
+body[data-brand='melbet'] .hero-inner {
+  flex-direction: row-reverse;
+}
+
+body[data-brand='melbet'] .hero-content {
+  max-width: 540px;
+}
+
+body[data-brand='melbet'] .hero-brand-strip {
+  background: rgba(255, 138, 0, 0.1);
+}
+
+body[data-brand='melbet'] .hero-showcase-card {
+  transform: translateX(-24px);
+  background: linear-gradient(160deg, rgba(255, 138, 0, 0.18), rgba(255, 255, 255, 0.04));
+}
+
+body[data-brand='melbet'] .hero-panel {
+  background: linear-gradient(180deg, rgba(255, 138, 0, 0.1), rgba(255, 255, 255, 0.03));
+}
+
+body[data-brand='melbet'] .hero-panel-item {
+  color: #e1d3c0;
+}
+
+body[data-brand='melbet'] .hero-showcase-card,
+body[data-brand='melbet'] .feature-card {
+  border-radius: 18px;
+}
+
+body[data-brand='melbet'] .hero-showcase-card {
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.44);
+}
+
+body[data-brand='melbet'] .phone-frame {
+  box-shadow:
+    0 0 0 2px #2b2b2b,
+    0 20px 60px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 1px rgba(255, 138, 0, 0.15);
+  transform: rotate(4deg);
+}
+
+body[data-brand='melbet'] .feature-card {
+  background: linear-gradient(180deg, rgba(28, 28, 29, 0.98), rgba(15, 15, 16, 0.96));
+  border-color: rgba(255, 138, 0, 0.14);
+}
+
+body[data-brand='melbet'] .feature-card::before {
+  opacity: 1;
+}
+
+body[data-brand='melbet'] .feature-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+}
+
+body[data-brand='melbet'] .feature-icon {
+  border-radius: 50%;
+}
+
+body[data-brand='melbet'] .ps-chip {
+  background: rgba(255, 138, 0, 0.18);
+  color: #fff2df;
+}
+
+body[data-brand='melbet'] .ps-quick-item {
+  border-radius: 14px;
+}
+
+body[data-brand='melbet'] .download {
+  background:
+    radial-gradient(circle at top center, rgba(255, 138, 0, 0.12), transparent 35%),
+    linear-gradient(180deg, #111111 0%, #1a1a1b 100%);
+}
+
+body[data-brand='melbet'] .coming-soon-badge {
+  background: rgba(255, 138, 0, 0.08);
+  border-color: rgba(255, 138, 0, 0.16);
+}
+
+body[data-brand='melbet'] .footer {
+  background: #090909;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-inner {
@@ -1482,6 +1877,30 @@ button {
 
   .hero-stats {
     justify-content: center;
+  }
+
+  .hero-brand-strip {
+    justify-content: center;
+  }
+
+  .hero-showcase-card {
+    max-width: 360px;
+  }
+
+  .hero-panel {
+    text-align: left;
+  }
+
+  body[data-brand='melbet'] .hero-inner {
+    flex-direction: column;
+  }
+
+  body[data-brand='melbet'] .hero-showcase-card {
+    transform: none;
+  }
+
+  body[data-brand='melbet'] .phone-frame {
+    transform: none;
   }
 
   .features-grid {
@@ -1527,6 +1946,18 @@ button {
 
   .hero-subtitle {
     font-size: 1rem;
+  }
+
+  .hero-brand-strip {
+    width: 100%;
+  }
+
+  .hero-showcase-card {
+    max-width: 300px;
+  }
+
+  .hero-panel {
+    padding: 16px;
   }
 
   .hero-stats {

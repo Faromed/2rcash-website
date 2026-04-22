@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { FiDownload } from 'react-icons/fi';
+import { FiExternalLink } from 'react-icons/fi';
 import config from '../config';
 
 export default function Navbar() {
@@ -32,23 +32,25 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-inner">
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">2R</div>
-          <span>2R<span className="logo-cash">CASH</span></span>
+          <div className="logo-icon logo-icon-brand">
+            <img src={config.logoUrl} alt={`${config.platformName} logo`} className="brand-logo-img" />
+          </div>
+          <span>{config.platformUppercase}<span className="logo-cash"> by 2RCASH</span></span>
         </Link>
 
         <div className="navbar-links">
           <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Accueil</Link>
-          <a href="/#fonctionnalites" onClick={(e) => handleNavClick(e, 'fonctionnalites')}>Fonctionnalités</a>
-          <a href="/#telecharger" onClick={(e) => handleNavClick(e, 'telecharger')}>Télécharger</a>
+          <a href="/#fonctionnalites" onClick={(e) => handleNavClick(e, 'fonctionnalites')}>Fonctionnalites</a>
+          <a href="/#telecharger" onClick={(e) => handleNavClick(e, 'telecharger')}>Telecharger</a>
           <Link to="/faq" className={location.pathname === '/faq' ? 'active' : ''}>FAQ</Link>
           <Link to="/support" className={location.pathname === '/support' ? 'active' : ''}>Support</Link>
           <a
-            href={config.apkDownloadUrl}
+            href={config.temporaryLinkUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary navbar-cta"
           >
-            <FiDownload /> APK
+            <FiExternalLink /> Logo
           </a>
         </div>
 
@@ -65,15 +67,15 @@ export default function Navbar() {
         <Link to="/">Accueil</Link>
         <Link to="/faq">FAQ</Link>
         <Link to="/support">Support</Link>
-        <Link to="/politique-de-confidentialite">Confidentialité</Link>
+        <Link to="/politique-de-confidentialite">Confidentialite</Link>
         <Link to="/conditions-generales">CGU</Link>
         <a
-          href={config.apkDownloadUrl}
+          href={config.temporaryLinkUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          <FiDownload /> Télécharger l&apos;APK
+          <FiExternalLink /> {config.temporaryLinkLabel}
         </a>
       </div>
     </nav>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FiMail, FiPhone, FiMessageCircle, FiClock, FiSend, FiCheckCircle } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
+import config from '../config';
 
 export default function SupportPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,11 +13,12 @@ export default function SupportPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:contact2rcash@gmail.com?subject=${encodeURIComponent(
-      `[Support 2RCASH] ${form.subject}`
+    const mailtoLink = `mailto:${config.contact.supportEmail}?subject=${encodeURIComponent(
+      `[Support ${config.appName} ${config.platformName}] ${form.subject}`
     )}&body=${encodeURIComponent(
-      `Nom: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+      `Nom: ${form.name}\nEmail: ${form.email}\nPlateforme: ${config.platformName}\n\n${form.message}`
     )}`;
+
     window.location.href = mailtoLink;
     setSubmitted(true);
   };
@@ -26,27 +28,26 @@ export default function SupportPage() {
       <div className="container">
         <div className="legal-header">
           <h1>Support & <span className="gradient-text">Assistance</span></h1>
-          <p>Notre équipe est là pour vous aider. N&apos;hésitez pas à nous contacter.</p>
+          <p>Notre equipe est la pour vous aider pour toutes vos operations {config.platformName}.</p>
         </div>
 
         <div className="support-grid">
-          {/* Info contact */}
           <div className="support-info">
-            <h3>Nos coordonnées</h3>
+            <h3>Nos coordonnees</h3>
 
             <div className="support-contact-item">
               <div className="support-contact-icon"><FiMail /></div>
               <div>
                 <div className="support-contact-label">Email</div>
-                <div className="support-contact-value">contact2rcash@gmail.com</div>
+                <div className="support-contact-value">{config.contact.supportEmail}</div>
               </div>
             </div>
 
             <div className="support-contact-item">
               <div className="support-contact-icon"><FiPhone /></div>
               <div>
-                <div className="support-contact-label">Téléphone</div>
-                <div className="support-contact-value">+229 01 67 47 81 77</div>
+                <div className="support-contact-label">Telephone</div>
+                <div className="support-contact-value">{config.contact.supportPhone}</div>
               </div>
             </div>
 
@@ -54,7 +55,7 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FaWhatsapp /></div>
               <div>
                 <div className="support-contact-label">WhatsApp</div>
-                <div className="support-contact-value">+229 67 47 81 77</div>
+                <div className="support-contact-value">{config.contact.whatsapp}</div>
               </div>
             </div>
 
@@ -62,32 +63,34 @@ export default function SupportPage() {
               <div className="support-contact-icon"><FiClock /></div>
               <div>
                 <div className="support-contact-label">Horaires</div>
-                <div className="support-contact-value">Lun - Dim : 7h - 00h</div>
+                <div className="support-contact-value">{config.contact.supportHours}</div>
               </div>
             </div>
 
             <div className="support-contact-item">
               <div className="support-contact-icon"><FiMessageCircle /></div>
               <div>
-                <div className="support-contact-label">Temps de réponse</div>
-                <div className="support-contact-value">Sous 24h maximum</div>
+                <div className="support-contact-label">Temps de reponse</div>
+                <div className="support-contact-value">{config.contact.responseTime}</div>
               </div>
             </div>
           </div>
 
-          {/* Formulaire */}
           <div className="support-form-card">
             {submitted ? (
               <div className="form-success">
                 <div className="form-success-icon"><FiCheckCircle /></div>
-                <h4>Message envoyé !</h4>
+                <h4>Message prepare !</h4>
                 <p>
-                  Votre client mail s&apos;est ouvert avec votre message pré-rempli.
-                  Envoyez-le pour que notre équipe le reçoive.
+                  Votre client mail s&apos;est ouvert avec votre message pre-rempli.
+                  Envoyez-le pour que notre equipe le recoive.
                 </p>
                 <button
                   className="btn btn-outline"
-                  onClick={() => { setSubmitted(false); setForm({ name: '', email: '', subject: '', message: '' }); }}
+                  onClick={() => {
+                    setSubmitted(false);
+                    setForm({ name: '', email: '', subject: '', message: '' });
+                  }}
                   style={{ marginTop: 20 }}
                 >
                   Envoyer un autre message
@@ -135,10 +138,10 @@ export default function SupportPage() {
                       onChange={handleChange}
                       required
                     >
-                      <option value="">Sélectionnez un sujet</option>
-                      <option value="Problème de dépôt">Problème de dépôt</option>
-                      <option value="Problème de retrait">Problème de retrait</option>
-                      <option value="Problème de compte">Problème de compte</option>
+                      <option value="">Selectionnez un sujet</option>
+                      <option value="Probleme de depot">Probleme de depot</option>
+                      <option value="Probleme de retrait">Probleme de retrait</option>
+                      <option value="Probleme de compte">Probleme de compte</option>
                       <option value="Signaler un bug">Signaler un bug</option>
                       <option value="Suggestion">Suggestion</option>
                       <option value="Autre">Autre</option>
@@ -151,7 +154,7 @@ export default function SupportPage() {
                       id="message"
                       name="message"
                       className="form-textarea"
-                      placeholder="Décrivez votre problème ou votre question..."
+                      placeholder={`Decrivez votre probleme ou votre question ${config.platformName}...`}
                       value={form.message}
                       onChange={handleChange}
                       required

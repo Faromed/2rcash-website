@@ -1,4 +1,4 @@
-import { FiDownload, FiSmartphone } from 'react-icons/fi';
+import { FiDownload, FiExternalLink, FiSmartphone } from 'react-icons/fi';
 import { FaGooglePlay } from 'react-icons/fa';
 import useScrollReveal from '../hooks/useScrollReveal';
 import config from '../config';
@@ -10,31 +10,36 @@ export default function DownloadSection() {
     <section className="download section" id="telecharger" ref={ref}>
       <div className="container">
         <div className="download-inner">
-          <div className="download-icon reveal">📱</div>
+          <div className="download-icon reveal">
+            <img src={config.logoUrl} alt={`${config.platformName} logo`} className="download-brand-logo" />
+          </div>
 
           <h2 className="download-title reveal">
-            Téléchargez <span className="gradient-text">2RCASH</span> maintenant
+            Telechargez <span className="gradient-text">{config.platformUppercase}</span> maintenant
           </h2>
 
           <p className="download-desc reveal">
-            Disponible en téléchargement direct au format APK pour tous les appareils Android.
-            Bientôt sur le Google Play Store.
+            Une page claire, un univers dedie et un acces direct a votre application {config.platformName}.
           </p>
 
           <div className="download-buttons reveal">
+            <span className="btn btn-primary btn-large btn-disabled download-btn-apk" aria-disabled="true">
+              <FiDownload /> APK temporairement indisponible
+            </span>
+
             <a
-              href={config.apkDownloadUrl}
+              href={config.temporaryLinkUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary btn-large download-btn-apk"
+              className="btn btn-outline btn-large download-alt-link"
             >
-              <FiDownload /> Télécharger l&apos;APK (Android)
+              <FiExternalLink /> {config.temporaryLinkLabel}
             </a>
 
             <div className="coming-soon-badge">
               <FaGooglePlay />
               <div>
-                <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>BIENTÔT SUR</div>
+                <div style={{ fontSize: '0.7rem', opacity: 0.6 }}>BIENTOT SUR</div>
                 <div style={{ fontWeight: 600 }}>Google Play</div>
               </div>
             </div>
@@ -42,7 +47,7 @@ export default function DownloadSection() {
 
           <p className="download-note reveal">
             <FiSmartphone style={{ verticalAlign: 'middle', marginRight: 6 }} />
-            Requiert Android 6.0 ou supérieur • Taille : ~25 Mo • Version :{' '}
+            Le telechargement APK est desactive pour le moment • Version :{' '}
             <span className="version">{config.appVersion}</span>
           </p>
         </div>
